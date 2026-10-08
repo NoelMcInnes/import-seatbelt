@@ -4,35 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Import Seatbelt — Early Access</title>
-    <style>
+   <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         font-family: Arial, sans-serif;
-        max-width: 700px;
+        max-width: 650px;
         margin: 80px auto;
-        padding: 0 20px;
-        line-height: 1.6;
-        color: #222;
+        padding: 0 24px;
+        line-height: 1.7;
+        background: #101c2b;
+        color: #e8f0f6;
     }
 
     h1 {
         font-size: 42px;
-        margin-bottom: 10px;
+        color: #ffffff;
+        line-height: 1.2;
     }
 
-    input {
+    p {
+        color: #b9c8d5;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    input[type="email"] {
+        flex: 1 1 240px;
+        min-width: 0;
+        padding: 16px;
         font-size: 16px;
-        padding: 14px;
-        width: 300px;
-        max-width: 90%;
+        border: 1px solid #344a5e;
+        border-radius: 8px;
+        background: #223449;
+        color: #ffffff;
+    }
+
+    input[type="email"]:focus {
+        outline: 2px solid #45d6c2;
+        outline-offset: 2px;
     }
 
     button {
+        padding: 16px 26px;
         font-size: 16px;
         font-weight: bold;
-        padding: 14px 22px;
-        margin-left: 5px;
+        background: #27bdaa;
+        color: #092a30;
+        border: none;
         border-radius: 8px;
         cursor: pointer;
+    }
+
+    button:hover {
+        background: #6de4d0;
+    }
+
+    a {
+        color: #45d6c2;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            margin: 35px auto;
+        }
+
+        h1 {
+            font-size: 34px;
+        }
     }
 </style>
 </head>

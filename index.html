@@ -4,41 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <title>Import Seatbelt</title>
-    <style>
+   <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         font-family: Arial, sans-serif;
-        max-width: 700px;
+        max-width: 850px;
         margin: 60px auto;
-        padding: 0 20px;
-        line-height: 1.6;
+        padding: 0 24px;
+        line-height: 1.7;
+        background: #101c2b;
+        color: #e8f0f6;
     }
 
     h1 {
         font-size: 48px;
-        margin-bottom: 0;
+        line-height: 1.15;
+        margin-bottom: 20px;
+        color: #ffffff;
     }
 
     h2 {
-        margin-top: 10px;
+        margin-top: 30px;
+        color: #45d6c2;
+    }
+
+    p, li {
+        color: #b9c8d5;
     }
 
     button {
         font-size: 18px;
         font-weight: bold;
-        padding: 15px 25px;
+        padding: 16px 28px;
+        border: none;
         border-radius: 8px;
+        background: #27bdaa;
+        color: #092a30;
         cursor: pointer;
+        transition: background 0.2s;
     }
+
+    button:hover {
+        background: #6de4d0;
+    }
+
     .preview {
-    margin: 30px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: #f7f7f7;
+        margin: 35px 0;
+        padding: 25px;
+        border: 1px solid #344a5e;
+        border-radius: 12px;
+        background: #17283a;
+    }
+
+    .preview h3 {
+        color: #ffffff;
+        margin-top: 0;
+    }
+
+    .preview p {
+        margin: 10px 0;
+        padding: 10px 14px;
+        background: #223449;
+        border-radius: 6px;
+    }
+
+    strong {
+        color: #ffffff;
+    }
+
+    a {
+        color: #45d6c2;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            margin: 30px auto;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+.preview p.good {
+    border-left: 4px solid #67d5b0;
 }
 
-.preview p {
-    margin: 8px 0;
+.preview p.warning {
+    border-left: 4px solid #e5b76b;
+}
+
+.preview p.danger {
+    border-left: 4px solid #f28d8d;
+}
+.sample-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #e5b76b;
+    background: #3a3427;
+    padding: 4px 9px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 </style>
 </head>
@@ -61,13 +132,12 @@
     <li>Suspiciously large batches of changes</li>
 </ul>
 <div class="preview">
-    <h3>Roster Risk Report</h3>
-
-    <p>✓ 1,283 students unchanged</p>
-    <p>⚠ 31 student records modified</p>
-    <p>🚨 147 students unexpectedly missing</p>
-    <p>🚨 29 populated fields become blank</p>
-    <p>🚨 8 duplicate sourced Ids</p>
+<h3>Roster Risk Report <span class="sample-label">SAMPLE</span></h3>
+    <p class="good"> 1,283 students unchanged</p>
+    <p class="warning"> 31 student records modified</p>
+    <p class="danger"> 147 students unexpectedly missing</p>
+    <p class="danger"> 29 populated fields become blank</p>
+    <p class="danger"> 8 duplicate sourced Ids</p>
 </div>
 <p><strong>Your files stay on your computer. No account required.</strong></p>
 
